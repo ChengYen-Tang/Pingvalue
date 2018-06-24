@@ -10,7 +10,7 @@ namespace Pingvalue
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js",
-                        "~/Scripts/jquery.easing.1.3.js"));
+                        "~/Scripts/jquery-easing/jquery.easing.min.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
@@ -21,15 +21,15 @@ namespace Pingvalue
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                    "~/Scripts/bootstrap.bundle.min.js",
-                    "~/Scripts/bootstrap.js"));
+                    "~/Scripts/bootstrap.bundle.min.js"
+                    /*"~/Scripts/bootstrap.min.js"*/));
 
             bundles.Add(new ScriptBundle("~/bundles/sb-admin").Include(
                     "~/Scripts/sb-admin/sb-admin.min.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/dataTables").Include(
-                    "~/Scripts/dataTables/dataTables.bootstrap4.js",
-                    "~/Scripts/dataTables/jquery.dataTables.js"));
+                    "~/Scripts/dataTables/jquery.dataTables.js",
+                    "~/Scripts/dataTables/dataTables.bootstrap4.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/chart").Include(
                     "~/Scripts/chart.js/Chart.min.js"));
@@ -39,9 +39,12 @@ namespace Pingvalue
                     "~/Scripts/sb-admin/sb-admin-charts.min.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
+                 "~/Content/font-awesome/css/font-awesome.min.css",
                       "~/Content/bootstrap.css",
-                      "~/Content/sb-admin/sb-admin.css",
-                      "~/Content/font-awesome/css/font-awesome.min.css"));
+                      "~/Content/sb-admin/sb-admin.css"));
+
+            bundles.Add(new StyleBundle("~/Content/Site").Include(
+                      "~/Content/Site.css"));
 
             bundles.Add(new StyleBundle("~/Content/dataTables").Include(
                       "~/Content/dataTables/dataTables.bootstrap4.css"));

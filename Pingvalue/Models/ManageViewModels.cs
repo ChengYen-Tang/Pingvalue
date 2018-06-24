@@ -83,4 +83,17 @@ namespace Pingvalue.Models
         public string SelectedProvider { get; set; }
         public ICollection<System.Web.Mvc.SelectListItem> Providers { get; set; }
     }
+
+    public class EditUserViewModel
+    {
+        public string Id { get; set; }
+
+        [Required(AllowEmptyStrings = false)]
+        [Display(Name = "Email")]
+        [EmailAddress]
+        public string Email { get; set; }
+        [Required(AllowEmptyStrings = false)]
+        [Display(Name = "使用者名稱")]
+        public string UserName { get; set; }
+    }
 }

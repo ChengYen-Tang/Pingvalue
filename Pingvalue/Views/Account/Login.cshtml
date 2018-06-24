@@ -27,28 +27,19 @@
                     @Html.AntiForgeryToken()
                     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                     <div class="form-group">
-                        @*@Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
-                            @Html.ValidationMessageFor(m => m.Email, "", )*@
-                        @Html.LabelFor(m => m.Email)
-                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control", @placeholder = "Enter email" })
-                        @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
-                        @*<label for="exampleInputEmail1">Email address</label>*@
-                        @*<input class="form-control" id="exampleInputEmail1" type="email" aria-describedby="emailHelp" placeholder="Enter email">*@
+                        @Html.LabelFor(m => m.UserName)
+                        @Html.TextBoxFor(m => m.UserName, new { @class = "form-control", @placeholder = "Enter email" })
+                        @Html.ValidationMessageFor(m => m.UserName, "", new { @class = "text-danger" })
                     </div>
                     <div class="form-group">
                         @Html.LabelFor(m => m.Password)
-                        @Html.TextBoxFor(m => m.Password, new { @class = "form-control", @placeholder = "Password" })
+                        @Html.PasswordFor(m => m.Password, new { @class = "form-control", @placeholder = "Password" })
                         @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
-                        @*<label for="exampleInputPassword1">Password</label>
-                            <input class="form-control" id="exampleInputPassword1" type="password" placeholder="Password">*@
                     </div>
                     <div class="form-group">
                         <div class="form-check">
                             @Html.CheckBoxFor(m => m.RememberMe, new { @class = "form-check-input" })
                             @Html.LabelFor(m => m.RememberMe)
-                            @*<label class="form-check-label">
-                                    <input class="form-check-input" type="checkbox"> Remember Password
-                                </label>*@
                         </div>
                     </div>
                     <div class="form-group">
@@ -57,9 +48,6 @@
                 }
                 <div class="text-center">
                     @Html.ActionLink("註冊一個帳戶", "Register", null, new { @class = "d-block small mt-3" })
-                    @Html.ActionLink("忘記密碼?", "ForgotPassword", null, new { @class = "d-block small" })
-                    @*<a class="d-block small mt-3" href="register.html">Register an Account</a>
-                        <a class="d-block small" href="forgot-password.html">Forgot Password?</a>*@
                 </div>
             </div>
         </div>
